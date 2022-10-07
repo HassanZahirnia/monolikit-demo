@@ -32,12 +32,16 @@ export default defineConfig({
 			},
 		}),
 		autoimport({
+			vueTemplate: true,
 			dts: 'resources/types/auto-imports.d.ts',
 			imports: [
 				'vue',
 				'@vueuse/core',
 				'@vueuse/head',
 				hybridlyImports,
+			],
+			dirs: [
+				'./resources/scripts',
 			],
 		}),
 		components({
